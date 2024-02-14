@@ -11,4 +11,14 @@
 function play(){
     hideElementById('home-screen');
     showElementById('play-ground');
+    continueGame()
+}
+function continueGame(){
+    const alphabet = getARandomAlphabet();
+    console.log('your random',alphabet);
+    //random alphabet to show
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+    //set background color
+    setBackgroundColorById(alphabet)
 }
